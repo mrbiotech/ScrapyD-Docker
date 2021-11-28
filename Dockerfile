@@ -1,5 +1,7 @@
 FROM python:3.10.0-alpine3.14
 EXPOSE 6800
+VOLUME /etc/scrapyd
+WORKDIR /scrapyd
 # Install dependencies to build Python cffi module and install ScrapyD
 RUN apk update && \
     apk upgrade && \
